@@ -35,9 +35,9 @@ model’s performance.
 ## hw2: Object Tracking
 
 ### Objective
-#### Implement visual multiple object tracking on videos
-#### Using detection model + Hungarian algorithm
-##### Using tracking model directly are NOT permitted
-##### Calculate the total number of people appearing in the video
-#### Output the tracking result video
+-- Implement visual multiple object tracking on videos
+-- Using detection model + Hungarian algorithm
+-- Using tracking model directly are NOT permitted
+-- Calculate the total number of people appearing in the video
+-- Output the tracking result video
 
