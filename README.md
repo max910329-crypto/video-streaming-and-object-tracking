@@ -1,2 +1,2 @@
-# Video-streaming-and-object-tracking
-Video streaming and object tracking HW demo
+# video-streaming-and-object-tracking
+video streaming and object tracking HW demo
