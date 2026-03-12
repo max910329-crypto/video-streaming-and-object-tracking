@@ -35,9 +35,83 @@ model’s performance.
 ## hw2: Object Tracking
 
 ### Objective
--- Implement visual multiple object tracking on videos
--- Using detection model + Hungarian algorithm
--- Using tracking model directly are NOT permitted
--- Calculate the total number of people appearing in the video
--- Output the tracking result video
+1. Implement visual multiple object tracking on videos
+2. Using detection model + Hungarian algorithm
+3. Using tracking model directly are NOT permitted
+4. Calculate the total number of people appearing in the video
+5. Output the tracking result video
 
+### Steps
+1. Choose a detection model and do detection for each frame.
+  - You can use pre-trained weight or train by yourself.
+  - It is only necessary to detect the ‘people’ category.
+2. Using Hungarian algorithm to match the bounding boxes.
+  - You can use existing sklearn function.
+  - Decide on the cost factor by yourself. (IOU, distance, ReID similarity, etc.)
+  - If same person leaves and re-enters the frame, they should be counted as a different individual.
+3. Calculate the total number of people in the video.
+4. Render tracking results and save the video
+
+### Output Video Requirements
+
+1. People count on the upper left corner
+2. People bounding boxes
+  - Box of different instance should be colored with 
+difference colors.
+  - Box of the same instance should maintain the same 
+color within frames.
+  - unique box_id labeled on box.
+3. Trajectory visualization
+  - Visualize each people’s trajectory
+
+
+---
+
+## hw3: Object Detection
+
+### Introduction
+1. Train a neural network to do detection on our own dataset
+2. Practice how to modify the target module in an existing model and implement it as a 
+custom module.
+3. Model : object detection algorithms
+  - RT-DETR
+    - You should use rdetr-resnet18 as your backbone model
+    - if you choose another model as your backbone, you will get 0 points in HW3
+  - The pretrained model weights are available
+
+### Dataset
+- GTA video dataset
+- You only need to detect car 
+  - Only one class
+- 1596 training images, labels
+- 227 validation images, labels
+- 456 testing images
+
+
+---
+
+## hw4: Referring Expression Segmentation (RES)
+
+### Introduction
+- In this assignment, you will fine-tune a language-guided image segmentation model 
+on the given dataset to learn how natural-language inputs can condition pixel-level 
+predictions.
+
+### What to do?
+- You’re tasked with completing at least 4 Python Files: dataset.py, model.py, train.py, 
+test.py
+- You need to implement your model inside model.py. This network should be rendered 
+accessible to train.py and test.py through import.
+- Within these files, you can import any package and design any additional classes or 
+functions if you need. 
+- Discovery of any infringement of this cardinal rule will incur a penalty of a zero 
+score for this assignment.
+- We have already implemented portions of the provided template. However, if you prefer, 
+you may discard our implementation entirely.
+- You can ONLY use openai/clip-vit-base-patch16 as your base model.
+
+### Dataset
+The dataset is built upon COCO images and contains a total of 17,596 samples for evaluation:
+- Train: 13,811 samples
+- Valid: 1,975 samples
+- Test: 1,810 samples
