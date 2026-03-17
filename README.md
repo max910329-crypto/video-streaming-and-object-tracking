@@ -6,6 +6,8 @@ video streaming and object tracking HW demo
 
 ## hw1: Image Classification
 
+* **Developed an image classification pipeline in PyTorch, including custom model design, training, and testing for a 100-class sports image dataset.**
+
 ### Introduction
 1. For this assignment, you are required to build a neural network with PyTorch and train it 
 to carry out a classification task.
@@ -33,6 +35,8 @@ model’s performance.
 ---
 
 ## hw2: Object Tracking
+
+* **Developed a multiple object tracking pipeline for video analysis, including person detection, bounding box association, unique ID assignment, trajectory visualization, and total people counting.**
 
 ### Objective
 1. Implement visual multiple object tracking on videos
@@ -69,6 +73,8 @@ color within frames.
 
 ## hw3: Object Detection
 
+* **Fine-tuned and customized an RT-DETR-based detection pipeline for car detection, including target-module modification and training on a custom GTA dataset.**
+
 ### Introduction
 1. Train a neural network to do detection on our own dataset
 2. Practice how to modify the target module in an existing model and implement it as a 
@@ -91,6 +97,8 @@ custom module.
 ---
 
 ## hw4: Referring Expression Segmentation (RES)
+
+* **Developed a vision-language segmentation pipeline by fine-tuning a CLIP-based model to generate pixel-level masks from natural language referring expressions.**
 
 ### Introduction
 - In this assignment, you will fine-tune a language-guided image segmentation model 
